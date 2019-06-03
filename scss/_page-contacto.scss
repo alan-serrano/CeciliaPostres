@@ -1,0 +1,25 @@
+/* pagina inicio */
+.contacto section.hero {
+    height: calc(100vh - 80px);
+    background: url("../img/postres/menu-4-background.jpg");
+    background-position: left center;
+    background-size: cover;
+    padding-top: 80px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .contenedor {
+        background: rgba(white, 0.6);
+        display: flex;
+        .columna{
+            width: 50%;
+            padding-right: 40px;
+
+            &:last-child{
+                padding-right: 0;
+            }
+        }
+    }
+}
