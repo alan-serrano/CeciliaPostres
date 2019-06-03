@@ -1,6 +1,6 @@
 /* menu-principal */
 header{
-    background: #cb828b;
+    background: rgba(#cb828b, 0.6);
     height: 80px;
     position: fixed;
     top: 0;
@@ -48,7 +48,7 @@ header{
                 color: white;
                 text-decoration: none;
                 padding: 15px 25px;
-                border-bottom: 4px solid #cb828b;
+                border-bottom: 4px solid transparent;
 
                 &:hover{
                     border-bottom: 4px solid white;

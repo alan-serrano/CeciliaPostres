@@ -1,0 +1,20 @@
+/* ------------ */
+/* footer */
+/* ------------ */
+
+footer#footer-principal{
+    background: #cb828b;
+    
+    div.redes-sociales{
+        text-align: center;
+        i{
+            display: inline-block;
+            font-size: 24px;
+            padding: 10px 15px;
+            
+            color: #cb828b;
+            border-radius: 50%;
+            background: white;
+        }
+    }
+}

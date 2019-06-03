@@ -17,7 +17,7 @@
 
 /* menu-principal */
 header {
-  background: #cb828b;
+  background: rgba(203, 130, 139, 0.6);
   height: 80px;
   position: fixed;
   top: 0;
@@ -68,7 +68,7 @@ header {
   color: white;
   text-decoration: none;
   padding: 15px 25px;
-  border-bottom: 4px solid #cb828b;
+  border-bottom: 4px solid transparent;
 }
 .menu-contenedor ul.top-menu li a:hover {
   border-bottom: 4px solid white;
@@ -93,6 +93,24 @@ body.contacto li.contacto a {
 
 body.oficinas li.oficinas a {
   border-bottom: 4px solid white;
+}
+
+/* ------------ */
+/* footer */
+/* ------------ */
+footer#footer-principal {
+  background: #cb828b;
+}
+footer#footer-principal div.redes-sociales {
+  text-align: center;
+}
+footer#footer-principal div.redes-sociales i {
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px 15px;
+  color: #cb828b;
+  border-radius: 50%;
+  background: white;
 }
 
 /* ------------- */
@@ -147,8 +165,11 @@ body.oficinas li.oficinas a {
     transform: translateX(-300vw);
   }
 }
+/* ----------------- */
+/* Sección tradición */
+/* ----------------- */
 .inicio section.tradicion {
-  height: 43vh;
+  height: 60vh;
   width: 100%;
   background: url("../img/postres/fondo descripcion.jpg");
   background-position: center center;
@@ -156,13 +177,100 @@ body.oficinas li.oficinas a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+.inicio section.tradicion .contenedor {
+  width: 33vw;
+}
+.inicio section.tradicion .contenedor:first-child {
+  padding-bottom: 0;
+}
+.inicio section.tradicion .contenedor.postres {
+  display: flex;
+  justify-content: center;
+}
+.inicio section.tradicion .contenedor.postres .columna {
+  padding-right: 15px;
+}
+.inicio section.tradicion .contenedor.postres .columna:last-child {
+  padding-right: 0;
+}
+.inicio section.tradicion .contenedor.postres .img-contenedor {
+  width: 80px;
 }
 .inicio section.tradicion h2 {
   text-align: center;
 }
 .inicio section.tradicion p {
   text-align: center;
+}
+
+/* --------------- */
+/* Sección postres */
+/* --------------- */
+section.postres {
+  height: calc(100vh - 80px);
+}
+section.postres .contenedor {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  height: 100%;
+}
+section.postres .columna {
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+section.postres .columna:nth-child(1) {
+  background: url("../img/postres/menu-1_escala.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+section.postres .columna:nth-child(2) {
+  background: url("../img/postres/menu-2_escala.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+section.postres .columna:nth-child(3) {
+  background: url("../img/postres/menu-3_escala.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+section.postres .columna:nth-child(4) {
+  background: url("../img/postres/menu-4_escala.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+section.postres .columna .descripcion {
+  padding: 20px;
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  background: rgba(203, 130, 139, 0.6);
+  transition: all 0.5s ease;
+}
+section.postres .columna .descripcion > * {
+  text-align: center;
+  color: white;
+}
+section.postres .columna a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+section.postres .columna a:hover ~ .descripcion {
+  top: 50%;
+  left: 50%;
 }
 
 /*# sourceMappingURL=estilos.css.map */
