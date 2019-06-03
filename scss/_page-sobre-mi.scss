@@ -1,0 +1,160 @@
+/* ---------- */
+/* Sobre mí */
+/* ---------- */
+
+/* Sección de portada */
+
+.sobre-mi{
+    section{
+        // overflow-x: hidden;
+        // overflow-y: visible;
+    }
+    section.hero{
+        color: white;
+        text-shadow: 0.08em 0.08em 0.08em #272727;
+
+        
+        width: 100%;
+        background: url("../img/personas/foto\ chef\ \(2\).jpg");
+        background-position: center center;
+        background-size: cover;
+        padding-top: 80px;
+
+        @media only screen and (min-width: 981px){
+            min-height: none;
+            height: 90vh;
+            
+        }
+
+        .contenedor{
+            max-width: none;
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+
+            @media only screen and (min-width: 981px) {
+                background: rgba(#cb828b, 0.4);
+                width: 45vw;
+                margin: 10vh 5vw 0 auto;
+                height: 75vh;
+            }
+        }
+
+        .img-contenedor{
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            background: url("../img/personas/chef principal.png");
+            background-size: cover;
+            background-position: top center;
+            border-radius: 50%;
+
+            @media only screen and (min-width: 480px) {
+                width: 250px;
+                height: 250px;
+            }
+
+            @media only screen and (min-width: 981px) {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .columna{
+        
+            text-align: center;
+            @media only screen and (min-width: 981px) {
+               
+                padding-left: 125px;
+            } 
+        }
+    }
+}
+
+/* seccion lo que hago */
+
+section.lo-que-hago{
+    .contenedor{
+        width: 80vw;
+        /* Clearfix */
+        &:before,
+        &:after {
+            content: " ";
+            /* 1 */
+            display: table;
+            /* 2 */
+        }
+
+        &:after {
+            clear: both;
+        }
+
+        
+        .img-contenedor{
+            width: 100px;
+            height: 150px;
+            float: right;
+            margin-left: 10px;
+
+            img{
+                object-fit: contain;
+            }
+        }
+
+        h2{
+            text-align: right;
+        }
+    }
+}
+
+/* seccion nominaciones */
+
+section.nominaciones{
+    color: white;
+    .contenedor{
+        max-width: none;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: #cb828b;
+
+        @media only screen and (min-width: 768px){
+            flex-direction: row;
+        }
+        .columna{
+
+            &:nth-child(1){
+                width: 30%;
+                flex: 1;
+            }
+
+            &:nth-child(2){
+                width: 70%;
+                padding: 20px;
+                flex: 1;
+            }
+
+            .img-contenedor{
+                height: 100%;
+                width: 100%;
+            }
+
+            div.redes-sociales{
+             
+                i{
+                    display: inline-block;
+                    font-size: 24px;
+                    padding: 10px 15px;
+                    
+                    color: #cb828b;
+                    border-radius: 50%;
+                    background: white;
+                }
+            }
+        }
+    }
+}

@@ -65,7 +65,7 @@
 /* ----------------- */
 
 .inicio section.tradicion {
-    height: 60vh;
+    min-height: 60vh;
     width: 100%;
     background: url("../img/postres/fondo\ descripcion.jpg");
     background-position: center center;
@@ -75,7 +75,19 @@
     flex-direction: column;
     justify-content: center;
     .contenedor {
-        width: 33vw;
+        width: 90vw;
+
+        @media only screen and (min-width: 768px){
+            width: 60vw;
+        }
+
+        @media only screen and (min-width: 981px){
+            width: 50vw;
+        }
+
+        @media only screen and (min-width: 1405px){
+            width: 33vw;
+        }
 
         &:first-child {
             padding-bottom: 0;
@@ -84,9 +96,16 @@
         &.postres {
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
+            
 
             .columna {
+                max-width: 50%;
                 padding-right: 15px;
+
+                @media only screen and (min-width: 768px){
+                    max-width: 25%;
+                }
 
                 &:last-child {
                     padding-right: 0;
@@ -95,6 +114,8 @@
 
             .img-contenedor {
                 width: 80px;
+                max-width: 100%;
+                
             }
         }
     }
@@ -121,14 +142,24 @@ section.postres {
         width: 100%;
         padding: 0;
         display: flex;
+        flex-wrap: wrap;
         height: 100%;
     }
 
     .columna {
-        width: 25%;
-        height: 100%;
+        width: 100%;
+        height: 50%;
         overflow: hidden;
         position: relative;
+        @media only screen and (min-width: 768px){
+            width: 50%;
+            height: 50%;
+        }
+
+        @media only screen and (min-width: 1100px){
+            width: 25%;
+            height: 100%;
+        }
 
         &:nth-child(1){
             background: url("../img/postres/menu-1_escala.jpg");
@@ -162,12 +193,25 @@ section.postres {
         .descripcion{
             padding: 20px;
             position: absolute;
-            top: -100%;
-            left: 50%;
+            top: 0;
+            left: 0;
             width: 100%;
-            transform: translate(-50%, -50%);
-            background: rgba(#cb828b, 0.6);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(#cb828b, 0.4);
             transition: all .5s ease;
+
+            @media only screen and (min-width: 768px){
+                position: absolute;
+                height: auto;
+                top: -100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(#cb828b, 0.6);
+            }
 
             >*{
                 text-align: center;
@@ -184,8 +228,10 @@ section.postres {
             z-index: 2;
 
             &:hover~.descripcion {
-                top: 50%;
-                left: 50%;
+                @media only screen and (min-width: 768px){
+                    top: 50%;
+                    left: 50%;
+                }
             }
         }
 

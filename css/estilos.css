@@ -20,10 +20,29 @@
   /* Legacy iOS */
 }
 /* Generales */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 .contenedor {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .contenedor {
+    padding: 40px;
+  }
 }
 
 /* Imágenes */
@@ -33,6 +52,7 @@
 .img-contenedor img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 /* Tipografias */
@@ -194,7 +214,7 @@ footer#footer-principal div.redes-sociales i {
 /* Sección tradición */
 /* ----------------- */
 .inicio section.tradicion {
-  height: 60vh;
+  min-height: 60vh;
   width: 100%;
   background: url("../img/postres/fondo descripcion.jpg");
   background-position: center center;
@@ -205,7 +225,22 @@ footer#footer-principal div.redes-sociales i {
   justify-content: center;
 }
 .inicio section.tradicion .contenedor {
-  width: 33vw;
+  width: 90vw;
+}
+@media only screen and (min-width: 768px) {
+  .inicio section.tradicion .contenedor {
+    width: 60vw;
+  }
+}
+@media only screen and (min-width: 981px) {
+  .inicio section.tradicion .contenedor {
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 1405px) {
+  .inicio section.tradicion .contenedor {
+    width: 33vw;
+  }
 }
 .inicio section.tradicion .contenedor:first-child {
   padding-bottom: 0;
@@ -213,15 +248,23 @@ footer#footer-principal div.redes-sociales i {
 .inicio section.tradicion .contenedor.postres {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .inicio section.tradicion .contenedor.postres .columna {
+  max-width: 50%;
   padding-right: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .inicio section.tradicion .contenedor.postres .columna {
+    max-width: 25%;
+  }
 }
 .inicio section.tradicion .contenedor.postres .columna:last-child {
   padding-right: 0;
 }
 .inicio section.tradicion .contenedor.postres .img-contenedor {
   width: 80px;
+  max-width: 100%;
 }
 .inicio section.tradicion h2 {
   text-align: center;
@@ -241,13 +284,26 @@ section.postres .contenedor {
   width: 100%;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
 }
 section.postres .columna {
-  width: 25%;
-  height: 100%;
+  width: 100%;
+  height: 50%;
   overflow: hidden;
   position: relative;
+}
+@media only screen and (min-width: 768px) {
+  section.postres .columna {
+    width: 50%;
+    height: 50%;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  section.postres .columna {
+    width: 25%;
+    height: 100%;
+  }
 }
 section.postres .columna:nth-child(1) {
   background: url("../img/postres/menu-1_escala.jpg");
@@ -276,12 +332,26 @@ section.postres .columna:nth-child(4) {
 section.postres .columna .descripcion {
   padding: 20px;
   position: absolute;
-  top: -100%;
-  left: 50%;
+  top: 0;
+  left: 0;
   width: 100%;
-  transform: translate(-50%, -50%);
-  background: rgba(203, 130, 139, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(203, 130, 139, 0.4);
   transition: all 0.5s ease;
+}
+@media only screen and (min-width: 768px) {
+  section.postres .columna .descripcion {
+    position: absolute;
+    height: auto;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(203, 130, 139, 0.6);
+  }
 }
 section.postres .columna .descripcion > * {
   text-align: center;
@@ -294,9 +364,11 @@ section.postres .columna a {
   position: relative;
   z-index: 2;
 }
-section.postres .columna a:hover ~ .descripcion {
-  top: 50%;
-  left: 50%;
+@media only screen and (min-width: 768px) {
+  section.postres .columna a:hover ~ .descripcion {
+    top: 50%;
+    left: 50%;
+  }
 }
 
 /* pagina inicio */
@@ -321,6 +393,138 @@ section.postres .columna a:hover ~ .descripcion {
 }
 .contacto section.hero .contenedor .columna:last-child {
   padding-right: 0;
+}
+
+/* ---------- */
+/* Sobre mí */
+/* ---------- */
+/* Sección de portada */
+.sobre-mi section.hero {
+  color: white;
+  text-shadow: 0.08em 0.08em 0.08em #272727;
+  width: 100%;
+  background: url("../img/personas/foto chef (2).jpg");
+  background-position: center center;
+  background-size: cover;
+  padding-top: 80px;
+}
+@media only screen and (min-width: 981px) {
+  .sobre-mi section.hero {
+    min-height: none;
+    height: 90vh;
+  }
+}
+.sobre-mi section.hero .contenedor {
+  max-width: none;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+@media only screen and (min-width: 981px) {
+  .sobre-mi section.hero .contenedor {
+    background: rgba(203, 130, 139, 0.4);
+    width: 45vw;
+    margin: 10vh 5vw 0 auto;
+    height: 75vh;
+  }
+}
+.sobre-mi section.hero .img-contenedor {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  background: url("../img/personas/chef principal.png");
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 480px) {
+  .sobre-mi section.hero .img-contenedor {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media only screen and (min-width: 981px) {
+  .sobre-mi section.hero .img-contenedor {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+.sobre-mi section.hero .columna {
+  text-align: center;
+}
+@media only screen and (min-width: 981px) {
+  .sobre-mi section.hero .columna {
+    padding-left: 125px;
+  }
+}
+
+/* seccion lo que hago */
+section.lo-que-hago .contenedor {
+  width: 80vw;
+  /* Clearfix */
+}
+section.lo-que-hago .contenedor:before, section.lo-que-hago .contenedor:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+section.lo-que-hago .contenedor:after {
+  clear: both;
+}
+section.lo-que-hago .contenedor .img-contenedor {
+  width: 100px;
+  height: 150px;
+  float: right;
+  margin-left: 10px;
+}
+section.lo-que-hago .contenedor .img-contenedor img {
+  object-fit: contain;
+}
+section.lo-que-hago .contenedor h2 {
+  text-align: right;
+}
+
+/* seccion nominaciones */
+section.nominaciones {
+  color: white;
+}
+section.nominaciones .contenedor {
+  max-width: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #cb828b;
+}
+@media only screen and (min-width: 768px) {
+  section.nominaciones .contenedor {
+    flex-direction: row;
+  }
+}
+section.nominaciones .contenedor .columna:nth-child(1) {
+  width: 30%;
+  flex: 1;
+}
+section.nominaciones .contenedor .columna:nth-child(2) {
+  width: 70%;
+  padding: 20px;
+  flex: 1;
+}
+section.nominaciones .contenedor .columna .img-contenedor {
+  height: 100%;
+  width: 100%;
+}
+section.nominaciones .contenedor .columna div.redes-sociales i {
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px 15px;
+  color: #cb828b;
+  border-radius: 50%;
+  background: white;
 }
 
 /*# sourceMappingURL=estilos.css.map */
