@@ -1,0 +1,77 @@
+/* Generales */
+/* menu-principal */
+header {
+  background: #cb828b;
+  height: 80px;
+}
+
+.menu-contenedor {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.menu-contenedor input#menu-bar {
+  display: none;
+}
+.menu-contenedor label {
+  display: none;
+}
+.menu-contenedor span.logo {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-right: auto;
+}
+.menu-contenedor span.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.menu-contenedor nav {
+  margin-right: auto;
+}
+.menu-contenedor ul.top-menu {
+  margin: 0;
+  padding: 0;
+}
+.menu-contenedor ul.top-menu li {
+  list-style: none;
+  display: inline-block;
+}
+.menu-contenedor ul.top-menu li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-bottom: 4px solid #cb828b;
+}
+.menu-contenedor ul.top-menu li a:hover {
+  border-bottom: 4px solid white;
+}
+
+/* Seleccion de pagina activa */
+body.inicio li.inicio a {
+  border-bottom: 4px solid white;
+}
+
+body.acerca-de li.acerca-de a {
+  border-bottom: 4px solid white;
+}
+
+body.sobre-mi li.sobre-mi a {
+  border-bottom: 4px solid white;
+}
+
+body.contacto li.contacto a {
+  border-bottom: 4px solid white;
+}
+
+body.oficinas li.oficinas a {
+  border-bottom: 4px solid white;
+}
+
+/*# sourceMappingURL=estilos.css.map */
