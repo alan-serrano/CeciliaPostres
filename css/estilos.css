@@ -454,24 +454,6 @@ section.postres .columna a {
   padding-left: 2em;
 }
 
-/* pagina oficinas */
-/* section hero */
-.oficinas section.hero {
-  height: calc(100vh - 80px);
-  background: url("../img/postres/menu-2-background.jpg");
-  background-position: left center;
-  background-size: cover;
-  padding-top: 80px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.oficinas section.hero .contenedor .columna .img-contenedor {
-  height: 14vh;
-  width: 11vw;
-}
-
 /* ---------- */
 /* Sobre mí */
 /* ---------- */
@@ -539,29 +521,50 @@ section.postres .columna a {
 
 /* seccion lo que hago */
 section.lo-que-hago .contenedor {
-  width: 80vw;
+  width: 90vw;
   /* Clearfix */
 }
-section.lo-que-hago .contenedor:before, section.lo-que-hago .contenedor:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
+@media only screen and (min-width: 768px) {
+  section.lo-que-hago .contenedor {
+    width: 80vw;
+  }
 }
-section.lo-que-hago .contenedor:after {
-  clear: both;
+@media only screen and (min-width: 768px) {
+  section.lo-que-hago .contenedor:before, section.lo-que-hago .contenedor:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+}
+@media only screen and (min-width: 768px) {
+  section.lo-que-hago .contenedor:after {
+    clear: both;
+  }
 }
 section.lo-que-hago .contenedor .img-contenedor {
-  width: 100px;
-  height: 150px;
-  float: right;
-  margin-left: 10px;
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  section.lo-que-hago .contenedor .img-contenedor {
+    width: 100px;
+    height: 150px;
+    margin: 0 0 0 15px;
+    float: right;
+  }
 }
 section.lo-que-hago .contenedor .img-contenedor img {
   object-fit: contain;
 }
 section.lo-que-hago .contenedor h2 {
-  text-align: right;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  section.lo-que-hago .contenedor h2 {
+    text-align: right;
+  }
 }
 
 /* seccion nominaciones */
@@ -583,17 +586,56 @@ section.nominaciones .contenedor {
   }
 }
 section.nominaciones .contenedor .columna:nth-child(1) {
-  width: 30%;
   flex: 1;
+  height: 50vh;
+  width: 100%;
 }
-section.nominaciones .contenedor .columna:nth-child(2) {
-  width: 70%;
-  padding: 20px;
-  flex: 1;
+@media only screen and (min-width: 768px) {
+  section.nominaciones .contenedor .columna:nth-child(1) {
+    width: 30%;
+    height: 100%;
+  }
 }
-section.nominaciones .contenedor .columna .img-contenedor {
+section.nominaciones .contenedor .columna:nth-child(1) .img-contenedor {
   height: 100%;
   width: 100%;
+}
+section.nominaciones .contenedor .columna:nth-child(2) {
+  width: 100%;
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 768px) {
+  section.nominaciones .contenedor .columna:nth-child(2) {
+    width: 70%;
+  }
+}
+section.nominaciones .contenedor .columna:nth-child(2) .contenedor-img-nominaciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+section.nominaciones .contenedor .columna:nth-child(2) .img-contenedor {
+  margin: 0;
+  padding-right: 15px;
+}
+section.nominaciones .contenedor .columna:nth-child(2) .img-contenedor:nth-child(1) {
+  width: 200px;
+  height: 60px;
+}
+section.nominaciones .contenedor .columna:nth-child(2) .img-contenedor:nth-child(2) {
+  width: 100px;
+  height: 60px;
+  padding-right: 0;
+}
+section.nominaciones .contenedor .columna:nth-child(2) .img-contenedor img {
+  object-fit: contain;
+}
+section.nominaciones .contenedor .columna div.redes-sociales {
+  margin-top: 20px;
 }
 section.nominaciones .contenedor .columna div.redes-sociales i {
   display: inline-block;
@@ -602,6 +644,24 @@ section.nominaciones .contenedor .columna div.redes-sociales i {
   color: #cb828b;
   border-radius: 50%;
   background: white;
+}
+
+/* pagina oficinas */
+/* section hero */
+.oficinas section.hero {
+  height: calc(100vh - 80px);
+  background: url("../img/postres/menu-2-background.jpg");
+  background-position: left center;
+  background-size: cover;
+  padding-top: 80px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.oficinas section.hero .contenedor .columna .img-contenedor {
+  height: 14vh;
+  width: 11vw;
 }
 
 /*# sourceMappingURL=estilos.css.map */
