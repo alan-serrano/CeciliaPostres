@@ -649,7 +649,7 @@ section.nominaciones .contenedor .columna div.redes-sociales i {
 /* pagina oficinas */
 /* section hero */
 .oficinas section.hero {
-  height: calc(100vh - 80px);
+  height: 100vh;
   background: url("../img/postres/menu-2-background.jpg");
   background-position: left center;
   background-size: cover;
@@ -659,9 +659,32 @@ section.nominaciones .contenedor .columna div.redes-sociales i {
   flex-direction: column;
   justify-content: center;
 }
+.oficinas section.hero .contenedor {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: none;
+  width: 100%;
+  padding: 0;
+}
+.oficinas section.hero .contenedor .columna {
+  height: 80%;
+  padding-top: 80px;
+}
+.oficinas section.hero .contenedor .columna:nth-child(1) {
+  max-width: none;
+  width: 50%;
+  margin: 0 auto 0 10%;
+  border-radius: 5px;
+  position: relative;
+  background: rgba(203, 130, 139, 0.4);
+}
 .oficinas section.hero .contenedor .columna .img-contenedor {
   height: 14vh;
   width: 11vw;
+}
+.oficinas section.hero .contenedor .columna .img-contenedor img {
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=estilos.css.map */
