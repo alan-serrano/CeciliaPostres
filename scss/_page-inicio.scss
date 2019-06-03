@@ -70,10 +70,10 @@
     background: url("../img/postres/fondo\ descripcion.jpg");
     background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     .contenedor {
         width: 33vw;
 

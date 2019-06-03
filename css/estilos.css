@@ -1,4 +1,24 @@
 @charset "UTF-8";
+/* quicksand-regular - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/quicksand/quicksand-v9-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Quicksand Regular"), local("Quicksand-Regular"), url("../fonts/quicksand/quicksand-v9-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand/quicksand-v9-latin-regular.woff2") format("woff2"), url("../fonts/quicksand/quicksand-v9-latin-regular.woff") format("woff"), url("../fonts/quicksand/quicksand-v9-latin-regular.ttf") format("truetype"), url("../fonts/quicksand/quicksand-v9-latin-regular.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
+/* quicksand-700 - latin */
+@font-face {
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/quicksand/quicksand-v9-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Quicksand Bold"), local("Quicksand-Bold"), url("../fonts/quicksand/quicksand-v9-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/quicksand/quicksand-v9-latin-700.woff2") format("woff2"), url("../fonts/quicksand/quicksand-v9-latin-700.woff") format("woff"), url("../fonts/quicksand/quicksand-v9-latin-700.ttf") format("truetype"), url("../fonts/quicksand/quicksand-v9-latin-700.svg#Quicksand") format("svg");
+  /* Legacy iOS */
+}
 /* Generales */
 .contenedor {
   max-width: 1170px;
@@ -13,6 +33,11 @@
 .img-contenedor img {
   width: 100%;
   height: 100%;
+}
+
+/* Tipografias */
+html {
+  font-family: "Quicksand";
 }
 
 /* menu-principal */
@@ -174,6 +199,7 @@ footer#footer-principal div.redes-sociales i {
   background: url("../img/postres/fondo descripcion.jpg");
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
