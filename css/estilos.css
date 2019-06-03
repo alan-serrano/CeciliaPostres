@@ -312,15 +312,92 @@ section.postres .columna a:hover ~ .descripcion {
   justify-content: center;
 }
 .contacto section.hero .contenedor {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
 }
 .contacto section.hero .contenedor .columna {
   width: 50%;
   padding-right: 40px;
+  /* mover texto a la derecha */
+  /* color y tamaño a todas las propiedas con .tipo-uno */
+  /* h1 */
+  /* parrafos */
 }
 .contacto section.hero .contenedor .columna:last-child {
   padding-right: 0;
+}
+.contacto section.hero .contenedor .columna .derecha {
+  text-align: right;
+}
+.contacto section.hero .contenedor .columna .tipo-uno {
+  color: #c47586;
+  font-size: 22px;
+  font-weight: lighter;
+}
+.contacto section.hero .contenedor .columna h1.tipo-uno {
+  font-weight: normal;
+}
+.contacto section.hero .contenedor .columna p.tipo-uno {
+  margin-bottom: 0;
+}
+.contacto section.hero .contenedor .columna p.tipo-dos {
+  margin-top: 0;
+  font-size: 15px;
+  font-weight: bold;
+}
+.contacto section.hero .contenedor .columna p {
+  color: #e86783;
+  font-weight: normal;
+  font-size: 19px;
+}
+.contacto section.hero form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contacto section.hero form > * {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 1em;
+  background: #c47586;
+  border: 0;
+  color: white;
+}
+.contacto section.hero form > *::placeholder {
+  color: white;
+}
+.contacto section.hero form > *:last-child {
+  margin-bottom: 0;
+  padding: 0;
+  background: none;
+}
+.contacto section.hero form div.btn {
+  text-align: right;
+}
+.contacto section.hero form div.btn button {
+  background: #c47586;
+  border: 0;
+  color: white;
+  padding: 0.6em;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+/* pagina oficinas */
+/* section hero */
+.oficinas section.hero {
+  height: calc(100vh - 80px);
+  background: url("../img/postres/menu-2-background.jpg");
+  background-position: left center;
+  background-size: cover;
+  padding-top: 80px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.oficinas section.hero .contenedor .columna .img-contenedor {
+  height: 14vh;
+  width: 11vw;
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -11,15 +11,82 @@
     justify-content: center;
 
     .contenedor {
-        background: rgba(white, 0.6);
+        background: rgba(white, 0.8);
         display: flex;
-        .columna{
+
+        .columna {
+
             width: 50%;
             padding-right: 40px;
 
-            &:last-child{
+            &:last-child {
                 padding-right: 0;
+            }
+
+            /* mover texto a la derecha */
+            .derecha {
+                text-align: right;
+            }
+
+            /* color y tamaño a todas las propiedas con .tipo-uno */
+            .tipo-uno {
+                color: #c47586;
+                font-size: 22px;
+                font-weight: lighter;
+            }
+
+            /* h1 */
+            h1.tipo-uno {
+                font-weight: normal;
+            }
+
+            /* parrafos */
+            p.tipo-uno {
+                margin-bottom: 0;
+            }
+
+            p.tipo-dos {
+                margin-top: 0;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            p{
+                color: #e86783;
+                font-weight: normal;
+                font-size: 19px;
             }
         }
     }
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                > *{
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 1em;
+                    background: #c47586;
+                    border: 0;
+                    color: white;
+                    &::placeholder{
+                        color:white;
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                        padding: 0;
+                        background: none;
+                    }
+                }
+                div.btn{
+                    text-align: right;
+                    button{
+                        background: #c47586;
+                        border: 0;
+                        color: white;
+                        padding: 0.60em;
+                        padding-right:2em;
+                        padding-left: 2em;
+                    }
+                }
+            }
+
 }
