@@ -454,24 +454,6 @@ section.postres .columna a {
   padding-left: 2em;
 }
 
-/* pagina oficinas */
-/* section hero */
-.oficinas section.hero {
-  height: calc(100vh - 80px);
-  background: url("../img/postres/menu-2-background.jpg");
-  background-position: left center;
-  background-size: cover;
-  padding-top: 80px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.oficinas section.hero .contenedor .columna .img-contenedor {
-  height: 14vh;
-  width: 11vw;
-}
-
 /* ---------- */
 /* Sobre mí */
 /* ---------- */
@@ -602,6 +584,24 @@ section.nominaciones .contenedor .columna div.redes-sociales i {
   color: #cb828b;
   border-radius: 50%;
   background: white;
+}
+
+/* pagina oficinas */
+/* section hero */
+.oficinas section.hero {
+  height: calc(100vh - 80px);
+  background: url("../img/postres/menu-2-background.jpg");
+  background-position: left center;
+  background-size: cover;
+  padding-top: 80px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.oficinas section.hero .contenedor .columna .img-contenedor {
+  height: 14vh;
+  width: 11vw;
 }
 
 /*# sourceMappingURL=estilos.css.map */
