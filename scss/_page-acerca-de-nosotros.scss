@@ -1,0 +1,184 @@
+/* ------------------------- */
+/* Página Acerca de Nosotros */
+/* ------------------------- */
+
+/* Portada */
+body.acerca-de{
+    section{
+        margin: 10vh 0;
+    }
+    background: url("../img/postres/fondo-acerca-de.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    section.nosotros{
+        background: rgba(#cb828b, 0.5);
+        text-align: center;
+        color: white;
+        margin-top: calc(80px + 5vh);
+        .contenedor{
+            height: 100%;
+            width: 90vw;
+
+            @media only screen and (min-width: 768px){
+                width: 60vw;
+            }
+            
+        }
+
+        .columna{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .img-contenedor{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+
+            img{
+                object-fit: contain;
+            }
+        }
+    }//section.nosotros
+}
+
+/* Sección Nuestra Familia */
+
+section.familia{
+    text-align: center;
+    color: #cb828b;
+    .contenedor{
+        
+        height: 100%;
+            width: 90vw;
+
+            @media only screen and (min-width: 768px){
+                width: 60vw;
+            }
+    }
+}
+
+/* Sección Nuestro Equipo */
+
+section.equipo{
+    
+    text-align: center;
+    color: white;
+    background: #cb828b;
+
+    .contenedor{
+        max-width: 1080px;
+
+        &:nth-child(2){
+            display: flex;
+            flex-wrap: wrap;
+
+            .columna{
+                width: auto;
+                height: calc(100vh - 80px);
+                flex-grow: 1;
+                margin-right: 10px;
+                position: relative;
+                overflow: hidden;
+                z-index: 2;
+
+                @media only screen and (min-width: 768px){
+                    
+                    width: calc(50% - 10px);
+                }
+
+                @media only screen and (min-width: 981px){
+                    height: auto;
+                    width: calc(25% - 10*3px);
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+                &:nth-child(1){
+                    background: url("../img/personas/chef\ \(1\).jpg");
+                    background-size: cover;
+                    background-origin: center center;
+                    
+                }
+                &:nth-child(2){
+                    background: url("../img/personas/chef\ principal.png");
+                    background-size: cover;
+                    background-origin: center center;
+                }
+                &:nth-child(3){
+                    background: url("../img/personas/chef\ \(1\).png");
+                    background-size: cover;
+                    background-origin: center center;
+                }
+                &:nth-child(4){
+                    background: url("../img/personas/chef\ \(2\).jpg");
+                    background-size: cover;
+                    background-origin: center center;
+                }
+
+                &:hover{
+                    
+                    .descripcion{
+                        transform: translate(0, 0);
+                    }
+                }
+                .descripcion{
+                    
+                    transform: translate(0, 80%);
+                    transition: all .5s linear;
+                    width: 100%;
+                    height: 100%;
+                    padding: 1em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background: rgba(#cb828b, 0.5);
+
+                    div.redes-sociales{
+                        text-align: center;
+                        i{
+                            display: inline-block;
+                            font-size: 16px;
+                            padding: 6px 11px;
+                            
+                            color: #cb828b;
+                            border-radius: 50%;
+                            background: white;
+                        }
+                    }
+                    
+                }
+                //.descripcion
+            }
+            // .columna
+        }
+        // &:nth-child(2)
+    }
+    // .contenedor
+}
+
+section.lema{
+    text-align: center;
+    color: #cb828b;
+    background: url("../img/postres/fondo\ descripcion.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    .contenedor{
+        width: 90vw;
+
+        @media only screen and (min-width: 768px) {
+            width: 60vw;
+        }
+
+        .img-contenedor{
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
