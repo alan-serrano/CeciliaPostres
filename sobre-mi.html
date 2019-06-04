@@ -7,10 +7,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="recursos/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -19,30 +15,25 @@
 </head>
 
 <body class="sobre-mi">
-    <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
 
-    <!-- Add your site or application content here -->
     <header>
         <div class="menu-contenedor">
             <input type="checkbox" id="menu-bar">
-            <label class="icon-menu" for="menu-bar"></label>
             <span class="logo">
-                <img src="img/logos/logo.png" alt="">
+                <a href="index.html"><img src="img/logos/logo.png" alt=""></a>
             </span>
-
             <nav class="menu nav-menu">
-
+    
                 <ul class="top-menu">
                     <li class="inicio"><a href="index.html">INICIO</a></li>
+                    <li class="menu"><a href="menu.html">MENÚ</a></li>
                     <li class="acerca-de"><a href="acerca-de.html">ACERCA DE</a></li>
                     <li class="sobre-mi"><a href="sobre-mi.html">SOBRE MÍ</a></li>
                     <li class="contacto"><a href="contactanos.html">CONTÁCTANOS</a></li>
                     <li class="oficinas"><a href="oficinas.html">OFICINAS</a></li>
                 </ul>
             </nav>
-
+            <label class="icon-menu" for="menu-bar"><i class="fas fa-bars"></i></label>
         </div>
     </header>
 
@@ -96,30 +87,29 @@
                     </div>
                 </div><!-- .contenedor-img-nominaciones -->
                 <div class="redes-sociales">
-                    <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
                 </div>
             </div><!-- columna -->
         </div><!-- .contenedor -->
     </section><!-- section.nominaciones -->
 
-    <section class="tartas">
+    <section class="novedades">
         <div class="contenedor">
             <div class="columna">
+                <h2>NOVEDADES</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt, laboriosam rem esse cum atque
                     dignissimos? Repellendus a ex, aperiam accusamus facilis sequi nulla quo nesciunt ea, ipsum tenetur
                     error quidem.</p>
-                <div class="img-contenedor">
-                    <img src="" alt="">
-                </div>
             </div>
 
             <div class="columna">
-                <h2>TARTAS ARTESANAS</h2>
+                <h2>VIDEO RECOMENDADO</h2>
                 <p>Diseñamos, personalizamos y elaboramos tus tartas decoradas</p>
-                <div class="vid-contenedor">
-                    <video src=""></video>
+                <div class="img-contenedor">
+                    <img src="img/postres/video.jpg"></img>
+                    <i class="fas fa-play"></i>
                 </div>
             </div>
 
@@ -127,31 +117,24 @@
     </section><!-- section.tartas -->
 
     <footer id="footer-principal">
-            <div class="contenedor">
-                <div class="columna">
-                    <div class="redes-sociales">
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                        <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                    </div>
+        <div class="contenedor">
+            <div class="columna">
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><i
+                            class="fab fa-youtube"></i></a>
                 </div>
             </div>
-        </footer><!-- footer.footer_principal -->
+        </div>
+    </footer><!-- footer.footer_principal -->
 
-    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-    <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>

@@ -10,17 +10,35 @@ header{
 }
 .menu-contenedor{
     max-width: 1170px;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @media only screen and (min-width: 981px){
+        justify-content: center;
+    }
+
+
+    
     input#menu-bar{
         display: none;
+
+        &:checked ~ nav ul.top-menu{
+            transform: translate(0);
+        }
     }
     label{
-        display: none;
+        display: block;
+        margin-left: auto;
+        cursor: pointer;
+
+        @media only screen and (min-width: 981px){
+            display: none;
+        }
     }
     span.logo{
         display: block;
@@ -40,6 +58,25 @@ header{
     ul.top-menu{
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(#cb828b, 0.6);
+        padding: 20px;
+        height: calc(100vh - 80px);
+        transform: translate(100%);
+        transition: transform 0.5s linear;
+
+        @media only screen and (min-width: 981px){
+            transform: translate(0);
+            position: static;
+            display: block;
+            background: none;
+            height: auto;
+        }
+
         li{
             list-style: none;
             display: inline-block;
@@ -94,6 +131,13 @@ body.contacto{
 
 body.oficinas{
     li.oficinas{
+        a{
+            border-bottom: 4px solid white;
+        }
+    }
+}
+body.menu{
+    li.menu{
         a{
             border-bottom: 4px solid white;
         }

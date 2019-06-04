@@ -230,3 +230,66 @@ section.nominaciones{
         }
     }
 }
+
+/* Sección Novedades */
+section.novedades{
+    background: url("../img/postres/fondo\ principal\ 3.jpg");
+    background-position: center center;
+    text-align: center;
+    color: white;
+    
+    .contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+
+        
+       
+
+        .columna{
+            width: 100%;
+
+            @media only screen and (min-width: 768px){
+                width: 50%;
+            }
+            
+
+            &:nth-child(1){
+                padding: 20px;
+                background: rgba(#cb828b, 0.5);
+                height: 100%;
+                flex-grow: 1;
+                margin-top: 20px;
+
+                @media only screen and (min-width: 768px){
+                    margin-top: 0;
+                }
+
+
+           
+            }
+            
+        }
+
+        .img-contenedor{
+            position: relative;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+
+            img{
+                cursor: pointer;
+            }
+
+            i{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #cb828b;
+                font-size: 50px;
+            }
+        }
+    }
+}
