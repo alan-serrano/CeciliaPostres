@@ -78,8 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Botón */
 div.btn a.btn {
-  color: white;
-  background: #272727;
+  color: #cb828b;
+  background: white;
   display: inline-block;
   padding: 10px 15px;
   border-radius: 5px;
@@ -87,8 +87,8 @@ div.btn a.btn {
   text-decoration: none;
 }
 div.btn a.btn:hover {
-  color: #272727;
-  background: white;
+  color: white;
+  background: #cb828b;
 }
 
 /* menu-principal */
@@ -127,6 +127,7 @@ header {
   display: block;
   margin-left: auto;
   cursor: pointer;
+  color: white;
 }
 @media only screen and (min-width: 981px) {
   .menu-contenedor label {
@@ -246,13 +247,33 @@ footer#footer-principal div.redes-sociales i {
   display: flex;
 }
 .inicio section.hero .columna {
-  height: 80%;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: slider 12s infinite 10s;
+  animation: slider 12s infinite 2s;
+}
+.inicio section.hero .columna:nth-child(1) {
+  background-image: url("../img/postres/fondo-principal-1.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.inicio section.hero .columna:nth-child(2) {
+  background-image: url("../img/postres/fondo principal 2.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.inicio section.hero .columna:nth-child(3) {
+  background-image: url("../img/postres/fondo principal 3.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.inicio section.hero .columna:nth-child(4) {
+  background-image: url("../img/postres/fondo-principal-1.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 .inicio section.hero .columna .img-contenedor {
   width: 400px;
@@ -444,7 +465,7 @@ section.postres .columna a {
 
 /* pagina inicio */
 .contacto section.hero {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   background: url("../img/postres/menu-4-background.jpg");
   background-position: left center;
   background-size: cover;
@@ -457,14 +478,25 @@ section.postres .columna a {
 .contacto section.hero .contenedor {
   background: rgba(255, 255, 255, 0.8);
   display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 968px) {
+  .contacto section.hero .contenedor {
+    flex-wrap: nowrap;
+  }
 }
 .contacto section.hero .contenedor .columna {
-  width: 50%;
+  width: 100%;
   padding-right: 40px;
   /* mover texto a la derecha */
   /* color y tamaño a todas las propiedas con .tipo-uno */
   /* h1 */
   /* parrafos */
+}
+@media only screen and (min-width: 968px) {
+  .contacto section.hero .contenedor .columna {
+    width: 50%;
+  }
 }
 .contacto section.hero .contenedor .columna:last-child {
   padding-right: 0;
@@ -591,6 +623,9 @@ section.postres .columna a {
 }
 
 /* seccion lo que hago */
+section.lo-que-hago {
+  color: #cb828b;
+}
 section.lo-que-hago .contenedor {
   width: 90vw;
   /* Clearfix */

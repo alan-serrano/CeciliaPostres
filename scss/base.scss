@@ -64,8 +64,8 @@ h1,h2,h3,h4,h5,h6{
 /* Botón */
 div.btn{
     a.btn{
-        color: white;
-        background: #272727;
+        color: #cb828b;
+        background: white;
         display: inline-block;
         padding: 10px 15px;
         border-radius: 5px;
@@ -73,8 +73,8 @@ div.btn{
         text-decoration: none;
 
         &:hover{
-            color: #272727;
-            background: white;
+            color: white;
+            background: #cb828b;
         }
     }
 }

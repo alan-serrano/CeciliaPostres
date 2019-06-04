@@ -19,13 +19,34 @@
     }
 
     .columna {
-        height: 80%;
+        height: 100%;
         width: 100vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        animation: slider 12s infinite 10s;
+        animation: slider 12s infinite 2s;
+
+        &:nth-child(1){
+            background-image: url("../img/postres/fondo-principal-1.jpg");
+            background-position: center center;
+            background-size: cover;
+        }
+        &:nth-child(2){
+            background-image: url("../img/postres/fondo\ principal\ 2.jpg");
+            background-position: center center;
+            background-size: cover;
+        }
+        &:nth-child(3){
+            background-image: url("../img/postres/fondo\ principal\ 3.jpg");
+            background-position: center center;
+            background-size: cover;
+        }
+        &:nth-child(4){
+            background-image: url("../img/postres/fondo-principal-1.jpg");
+            background-position: center center;
+            background-size: cover;
+        }
 
         .img-contenedor {
             width: 400px;

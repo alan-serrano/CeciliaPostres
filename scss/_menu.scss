@@ -21,8 +21,6 @@ header{
     @media only screen and (min-width: 981px){
         justify-content: center;
     }
-
-
     
     input#menu-bar{
         display: none;
@@ -35,10 +33,13 @@ header{
         display: block;
         margin-left: auto;
         cursor: pointer;
+        color: white;
 
         @media only screen and (min-width: 981px){
             display: none;
         }
+
+        
     }
     span.logo{
         display: block;

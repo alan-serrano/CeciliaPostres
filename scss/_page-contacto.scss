@@ -1,6 +1,6 @@
 /* pagina inicio */
 .contacto section.hero {
-    height: calc(100vh - 80px);
+    min-height: calc(100vh - 80px);
     background: url("../img/postres/menu-4-background.jpg");
     background-position: left center;
     background-size: cover;
@@ -13,11 +13,21 @@
     .contenedor {
         background: rgba(white, 0.8);
         display: flex;
+        flex-wrap: wrap;
+
+        @media only screen and (min-width: 968px){
+            flex-wrap: nowrap;
+        }
+
 
         .columna {
 
-            width: 50%;
+            width: 100%;
             padding-right: 40px;
+
+             @media only screen and (min-width: 968px){
+                 width: 50%;
+             }
 
             &:last-child {
                 padding-right: 0;
