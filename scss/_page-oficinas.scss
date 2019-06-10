@@ -2,59 +2,122 @@
 
 /* section hero */
 .oficinas section.hero {
-    height: 100vh;
+    min-height: 100vh;
     background: url("../img/postres/menu-2-background.jpg");
     background-position: left center;
     background-size: cover;
     padding-top: 80px;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    line-height: 1.8em;
+    text-align: center;
+    color: white;
+    
+
+    @media only screen and (min-width: 981px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: right;
+    }
 
     .contenedor {
-        line-height: 1.8em;
-        text-align: right;
-        color: white;
         display: flex;
         align-items: center;
-        height: 90%;
+        flex-direction: column;
+        height: auto;
         max-width: none;
-        margin: 5% auto 5% 10%;
-        width: 70%;
+        margin: 5% auto;
+        width: 90%;
         background: rgba(#cb828b, 0.4);
-        
+        position: relative;
         padding: 0;
+
+        @media only screen and (min-width: 981px) {
+            flex-direction: row;
+            margin: 5% auto 5% 10%;
+            width: 70%;
+            height: 90%;
+        }
+
         .columna {
             height: 100%;
             padding: 20px;
-            &:nth-child(1) {
-                border-right: 10px solid white;
-                width: 50%;
-                border-radius: 5px;
-                position: relative;
-                transform: translate(40%, 0);
+            width: 100%;
 
+            &:nth-child(1) {
+
+                @media only screen and (min-width: 981px){
+                    width: 50%;
+                    margin-left: 20%;
+                    border-radius: 5px;
+                    position: relative;
+                }
+                
                 &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    height: 100%;
+
+                    @media only screen and (min-width: 981px) {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        height: 90%;
+                        border-right: 10px solid white;
+                        transform: translate(0, -50%);
+                    }
+                    
 
                 }
             }
 
+            &:nth-child(2){
+                
+                @media only screen and (min-width: 981px){
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    position: absolute;
+                    top: 0;
+                    left: 70%;
+                }
+
+                
+            }
+
             .img-contenedor {
-                height: 14vh;
-                width: 11vw;
+                margin: 0 auto;
+                height: 20vh;
+                width: 30vw;
+
+                @media only screen and (min-width: 981px){
+                    height: 14vh;
+                    width: 11vw;
+                }
 
                 img {
                     object-fit: contain;
                 }
+
+
+                &.img-mapa{
+                    height: 40vh;
+                    width: 100%;
+
+                    @media only screen and (min-width: 981px){
+                        width: 31vw;
+                        height: 28vh;
+                    }
+                    
+                    img{
+                        object-fit: cover;
+                    }
+                }
             }
 
             p{
-                margin: 0;
+                max-width: 400px;
+                margin: 0 auto;
             }
 
             div.redes-sociales{
@@ -68,7 +131,7 @@
                     border-radius: 50%;
                     background: white;
                 }
-            }
+            }//div.redes-sociales
 
            
         }

@@ -1,0 +1,240 @@
+/* ----------- */
+/* Página Menu */
+/* ----------- */
+
+/* Sección postres */
+
+
+section.postres {
+    
+
+    .contenedor {
+        max-width: none;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .columna {
+        height: calc(50vh - 40px);
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        
+        @media only screen and (min-width: 768px){
+            width: 50%;
+            height: calc(50vh);
+        }
+
+        @media only screen and (min-width: 1100px){
+            width: 25%;
+            height: 100vh;
+        }
+
+        &:nth-child(1){
+            background: url("../img/postres/menu-1_escala.jpg");
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            
+        }
+
+        &:nth-child(2){
+            background: url("../img/postres/menu-2_escala.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: left center;
+            
+        }
+        &:nth-child(3){
+            background: url("../img/postres/menu-3_escala.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+        }
+        &:nth-child(4){
+            background: url("../img/postres/menu-4_escala.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .descripcion{
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(#cb828b, 0.4);
+            transition: all .5s ease;
+
+            @media only screen and (min-width: 768px){
+                position: absolute;
+                height: auto;
+                top: -100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(#cb828b, 0.6);
+            }
+
+            >*{
+                text-align: center;
+                color: white;
+            }
+
+        }
+        //descripcion
+
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+
+            &:hover~.descripcion {
+                @media only screen and (min-width: 768px){
+                    top: 50%;
+                    left: 50%;
+                }
+            }
+        }
+
+    }
+    //columna
+
+}
+
+/* Sección de descripción de postres */
+section {
+    &.postres-descripcion {
+        /* Ocultar por defecto, se abrirá cuando esté seleccionado */
+        display: none;
+        text-align: center;
+        color: white;
+        background-position: center center;
+        background-size: cover;
+
+        /* Efecto Parallax */
+        background-attachment: fixed;
+
+        &:target{
+            /* Mostrar cuando esté seleccionado */
+            display: block;
+        }
+
+        &:nth-child(even){
+            /* Background a Pares */
+            background-image: url("../img/postres/menu-4_escala.jpg");
+
+        }
+
+        &:nth-child(odd){
+            /* Background Impares */
+            background-image: url("../img/postres/fondo\ descripcion.jpg");
+        }
+
+        .contenedor {
+            max-width: none;
+
+            h2{
+                display: inline-block;
+                background: #cb828b;
+                padding: 15px 40px;
+                border-radius: 5px;
+                border: #cb828b 2px solid;
+
+                &:hover{
+                    background: white;
+                    color: #cb828b;
+                }
+            }
+
+            &.flex {
+                display: flex;
+                flex-wrap: wrap;
+
+                .columna {
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+                    width: calc(100% - 20px);
+                    position: relative;
+                    overflow: hidden;
+
+                    
+
+                    @media only screen and (min-width: 768px){
+                        width: calc(100% / 2 - 20px);
+                    }
+                    @media only screen and (min-width: 1406px){
+                        width: calc(100% / 6 - 20px);
+                    }
+
+                }
+
+                .img-contenedor {
+                    height: 40vh;
+
+                    &:hover{
+                        ~ .descripcion{
+                            @media only screen and (min-width: 768px){
+                                top: 50%;
+                                left: 50%;
+                            }
+                        }
+                    }
+
+                    
+                    &::after{
+                        /* Se coloca al frente de la descripción */
+                        /* para que no interfiera con la transición */
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 3;
+                    }
+                }
+
+                .descripcion {
+                    padding: 20px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: rgba(#cb828b, 0.4);
+                    transition: all .5s ease;
+
+                    @media only screen and (min-width: 768px) {
+                        position: absolute;
+                        top: -100%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background: rgba(#cb828b, 0.6);
+                    }
+
+                    >* {
+                        text-align: center;
+                        color: white;
+                    }
+                }//descripcion
+            }//&.flex
+        }//.contenedor
+    }//&.postres-descripcion
+}//section

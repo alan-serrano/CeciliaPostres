@@ -31,6 +31,9 @@
             width: 100%;
             border-radius: 5px;
             position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
             @media only screen and (min-width: 981px) {
                 background: rgba(#cb828b, 0.4);
@@ -146,6 +149,7 @@ section.nominaciones{
         flex-direction: column;
         flex-wrap: wrap;
         background: #cb828b;
+        
 
         @media only screen and (min-width: 768px){
             flex-direction: row;
@@ -180,6 +184,7 @@ section.nominaciones{
 
                 @media only screen and (min-width: 768px){
                     width: 70%;
+                    justify-content: center;
                 }
 
                 .contenedor-img-nominaciones{
@@ -271,26 +276,6 @@ section.novedades{
            
             }
             
-        }
-
-        .img-contenedor{
-            position: relative;
-            margin: 0 auto;
-            width: 300px;
-            height: 300px;
-
-            img{
-                cursor: pointer;
-            }
-
-            i{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: #cb828b;
-                font-size: 50px;
-            }
         }
     }
 }
